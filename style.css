@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%; 
+  background-color: #0a1828;
+  background-size: cover;
+  font-family: "Roboto Flex", sans-serif;
+}
+/* NAVBAR */
+nav{
+  width: 100vh;
+}
+#logo-qdz{
+  height: 8em;
+  width: 12em;
+  
+}
+nav a:hover , .logo_social:hover{
+  color:#BFA181;
+  transition: 0.3s;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+nav ul,.logo_social{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#178582 ;
+    margin-top: 5%;
+    
+}
+nav a{
+    color: #178582;
+    
+}
+nav li {
+    margin-right: 10px;
+    margin-top: 10%;
+
+}
+hr{
+  width: 80%;
+  height: 3px;
+  margin: 10%;
+  background-color: #BFA181;
+  border: none;
+  
+}
+/* TITLE */
+h2{
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 5rem;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  color:#BFA181 ;
+  font-size: 3rem;
+}
+/* MAIN*/
+button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  padding:1%;
+  background-color: #bfa18100;
+  border: solid #BFA181 1px;
+  border-radius: 10px;
+  color: #178582;
+}
+button .email{
+  color: whitesmoke;
+}
+.title{
+  margin-top: 5%;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 3rem;
+}
+.text{
+  margin-top: 5%;
+  color: #178582;
+  text-justify: auto;
+  text-align: center;
+}
+.icon_contain{
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icon_contain .icon_skills{
+  height: 50px;
+  width: 50px;
+}
+.icon_contain {
+  border:solid #BFA181 0.5px;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+footer{
+  margin-top: 5%;
+  color: #178582;
+  text-align: center;
+}
+
+
+.p_text{
+  border:solid #BFA181 0.5px;
+  border-radius: 10px;
+  padding: 2%;
+  margin: 5%;
+}
+/* MEDIA QUERY MOBILE */
+ @media screen and (max-width:405px){
+  nav ul,.logo_social{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#178582 ;
+    margin-top: 5%;
+    margin-right: 2%;
+    
+}
+#logo-qdz{
+  height: 4em;
+  width: 6em;
+  
+}
+
+ }
