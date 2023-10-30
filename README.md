@@ -3,21 +3,27 @@
 #Deployment on ct-antoine:
 
 antoine@ct-antoine:~$ sudo nano /etc/apache2/sites-enabled/ct-antoine.conf
+
 <!-- MODIFY NANO -->
 
 #
+
 # /opt/git/antoine/antoine-project/cmd/sites-available.default_ct-antoine.conf
-#
-# git -C /opt/git/antoine/antoine-project pull origin master; sudo cp /opt/git/antoine/antoine-project/cmd/sites-available.default_ct-antoine.conf /etc/apach>
-#
-# sudo nano /etc/apache2/sites-available/ct-antoine.conf
+
 #
 
-<VirtualHost *:80>
-        # Haproxy Forward Client’s IP address to Backend
-        RemoteIPProxyProtocol On
-        RemoteIPHeader X-Forwarded-For
-        RemoteIPTrustedProxy 127.0.0.1
+# git -C /opt/git/antoine/antoine-project pull origin master; sudo cp /opt/git/antoine/antoine-project/cmd/sites-available.default_ct-antoine.conf /etc/apach>
+
+#
+
+# sudo nano /etc/apache2/sites-available/ct-antoine.conf
+
+#
+
+<VirtualHost \*:80> # Haproxy Forward Client’s IP address to Backend
+RemoteIPProxyProtocol On
+RemoteIPHeader X-Forwarded-For
+RemoteIPTrustedProxy 127.0.0.1
 
         # Use HTTP Strict Transport Security (HSTS) to force client to use secure connections only
         <IfModule mod_headers.c>
@@ -37,6 +43,7 @@ antoine@ct-antoine:~$ sudo nano /etc/apache2/sites-enabled/ct-antoine.conf
 
         <IfModule mod_deflate.c>
                 SetOutputFilter DEFLATE
+
 </IfModule>
 
         ServerSignature Off
@@ -54,6 +61,7 @@ antoine@ct-antoine:~$ sudo nano /etc/apache2/sites-enabled/ct-antoine.conf
                 AllowOverride None
                 FallbackResource /index.html
         </Directory>
+
 </VirtualHost>
 <!-- SAVE NANO AND EXIT -->
 antoine@ct-antoine:~$ sudo systemctl restart apache2
