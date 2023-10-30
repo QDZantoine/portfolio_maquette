@@ -19,8 +19,9 @@ nav{
 #logo-qdz{
   height: 8em;
   width: 12em;
-  
+
 }
+
 nav a:hover , .logo_social:hover{
   color:#BFA181;
   transition: 0.3s;
